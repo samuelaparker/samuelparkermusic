@@ -18,9 +18,8 @@ const config: Config = {
         sans: ["var(--font-koulen)"], // default font
       },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        mobile: "url('../public/bg-mobile.png')",
+        desktop: "url('../public/bg-desktop.png')",
       },
     },
     plugins: [],
