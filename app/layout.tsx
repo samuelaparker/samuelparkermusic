@@ -41,7 +41,7 @@ export default function RootLayout({
     >
       <body className="bg-black text-white border-indigo-500 h-screen overflow-hidden ">
         <div className="container mx-auto relative">
-          <div className="absolute bottom-0 left-0 ">
+          <div className="absolute bottom-0 left-0 my-8">
             <Navbar />
           </div>
           {children}
