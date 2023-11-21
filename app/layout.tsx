@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Rubik_Mono_One, Koulen, Dawning_of_a_New_Day } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
 
 const dawning = Dawning_of_a_New_Day({
   weight: ["400"],
@@ -38,7 +39,14 @@ export default function RootLayout({
       lang="en"
       className={`${dawning.variable} ${rubik_mono.variable} ${koulen.variable}`}
     >
-      <body>{children}</body>
+      <body className="bg-black text-white border-indigo-500 h-screen overflow-hidden ">
+        <div className="container mx-auto relative">
+          <div className="absolute bottom-0 left-0 ">
+            <Navbar />
+          </div>
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
