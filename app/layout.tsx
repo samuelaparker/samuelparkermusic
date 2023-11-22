@@ -39,7 +39,7 @@ export default function RootLayout({
       lang="en"
       className={`${dawning.variable} ${rubik_mono.variable} ${koulen.variable}`}
     >
-      <body className="bg-mobile sm:bg-desktop bg-cover bg-no-repeat text-white h-screen overflow-hidden ">
+      <body className="bg-mobile sm:bg-desktop bg-cover bg-no-repeat text-white overflow-hidden ">
         <div className="container mx-auto relative">
           <div className="absolute bottom-0 left-0 my-8">
             <Navbar />
