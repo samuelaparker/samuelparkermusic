@@ -1,6 +1,11 @@
+import Link from "next/link";
+
 export default function Bio() {
   return (
     <div className="min-h-[100svh]">
+      <Link href="/" className="font-dawning text-2xl">
+        Samuel Parker
+      </Link>
       <div>
         <p>
           From Maine&apos;s serene coast to the busy streets of NYC and now
