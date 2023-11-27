@@ -25,3 +25,12 @@ body {
     )
     rgb(var(--background-start-rgb)); */
 }
+
+@layer base {
+  input {
+    @apply rounded;
+  }
+  label {
+    @apply hidden;
+  }
+}

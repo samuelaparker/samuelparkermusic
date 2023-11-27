@@ -7,9 +7,11 @@ export default function Contact() {
       <Link href="/" className="font-dawning text-4xl">
         Samuel Parker
       </Link>
-      <div className="mt-4 sm:mt-8 max-w-3xl sm:text-2xl">
+      <div className="mt-4 sm:mt-8 max-w-3xl sm:text-4xl text-2xl">
         <p className="mt-2 ">For all inquiries please fill out form below.</p>
-        <ContactForm />
+        <div className="mt-4 text-base sm:text-lg">
+          <ContactForm />
+        </div>
       </div>
     </div>
   );
