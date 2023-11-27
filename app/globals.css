@@ -30,7 +30,4 @@ body {
   input {
     @apply rounded;
   }
-  label {
-    @apply hidden;
-  }
 }

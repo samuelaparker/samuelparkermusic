@@ -71,8 +71,6 @@ export default function Forms() {
         <form onSubmit={handleSubmit(onSubmit)}>
           {formStep === 0 && (
             <section className="flex flex-col justify-start items-stretch">
-              <h1>{questions[0].question}</h1>
-
               <label htmlFor={questions[0].question}>
                 {questions[0].choices[0].value}*
               </label>
@@ -85,96 +83,39 @@ export default function Forms() {
                 {...register(questions[0].choices[0].value, { required: true })}
               />
 
-              <label htmlFor={questions[0].question}>
-                {questions[0].choices[1].value}*
-              </label>
-              <input
-                className="text-black p-2"
-                type={questions[0].inputType}
-                placeholder={questions[0].placeholder}
-                {...register(questions[0].choices[1].value, { required: true })}
-              />
-
               {renderNextButton()}
             </section>
           )}
 
           {formStep === 1 && (
             <section className="flex flex-col justify-start items-stretch">
-              <h1>{questions[1].question}</h1>
+              <label htmlFor={questions[1].choices[0].value}>
+                {questions[1].choices[0].value}*
+              </label>
               <input
-                className="hidden text-black p-2"
+                className=" text-black p-2"
                 type={questions[1].inputType}
                 id={questions[1].choices[0].value}
                 placeholder={questions[1].placeholder}
-                {...register(questions[1].choices[0].value, { required: "" })}
-              />
-              <label
-                htmlFor={questions[1].choices[0].value}
-                className="mt-4 py-4 px-8 border-solid border-2 border-[#ccc] rounded transition-all ease-in-out duration-300"
-              >
-                {questions[1].choices[0].value}
-              </label>
-
-              <input
-                className="hidden text-black p-2"
-                id={questions[1].choices[1].value}
-                type={questions[1].inputType}
-                placeholder={questions[1].placeholder}
-                {...register(questions[1].choices[1].value, { required: "" })}
+                {...register(questions[1].choices[0].value, { required: true })}
               />
 
-              <label
-                className="mt-4 py-4 px-8 border-solid border-2 border-[#ccc] rounded transition-all ease-in-out duration-300"
-                htmlFor={questions[1].choices[1].value}
-              >
-                {questions[1].choices[1].value}
-              </label>
-
-              <input
-                className="hidden text-black p-2"
-                id={questions[1].choices[2].value}
-                type={questions[1].inputType}
-                placeholder={questions[1].placeholder}
-                {...register(questions[1].choices[2].value, { required: "" })}
-              />
-              <label
-                className="mt-4 py-4 px-8 border-solid border-2 border-[#ccc] rounded transition-all ease-in-out duration-300"
-                htmlFor={questions[1].choices[2].value}
-              >
-                {questions[1].choices[2].value}
-              </label>
-
-              <input
-                className="hidden text-black p-2"
-                id={questions[1].choices[3].value}
-                type={questions[1].inputType}
-                placeholder={questions[1].placeholder}
-                {...register(questions[1].choices[3].value, { required: "" })}
-              />
-              <label
-                className="mt-4 py-4 px-8 border-solid border-2 border-[#ccc] rounded transition-all ease-in-out duration-300"
-                htmlFor={questions[1].choices[3].value}
-              >
-                {questions[1].choices[3].value}
-              </label>
               {renderNextButton()}
             </section>
           )}
 
           {formStep === 2 && (
             <section className="flex flex-col justify-start items-stretch">
-              <h1>{questions[2].question}</h1>
               <label htmlFor={questions[2].question}>
                 {questions[2].choices[0].value}*
               </label>
-              <textarea
+              <input
                 // type={questions[2].inputType}
                 className="text-black p-2"
                 id={questions[2].question}
                 placeholder={questions[2].placeholder}
                 {...register(questions[2].question, { required: true })}
-              ></textarea>
+              ></input>
               {renderNextButton()}
             </section>
           )}

@@ -1,43 +1,31 @@
 export let questions = [
   {
     inputType: "text",
-    question: "What is the name of the company and your position?",
+    question: "email",
     placeholder: "",
     choices: [
       {
-        value: "Company name",
-      },
-      {
-        value: "Position",
-      },
-    ],
-  },
-  {
-    inputType: "checkbox",
-    question: "What kind of website do you need?",
-    placeholder: "",
-    choices: [
-      {
-        value: "Personal Website",
-      },
-      {
-        value: "Landing Page/Simple Marketing Site",
-      },
-      {
-        value: "Multi-page Marketing Site or Blog",
-      },
-      {
-        value: "Other",
+        value: "Email",
       },
     ],
   },
   {
     inputType: "text",
-    question: "What is the main objective for this website?",
+    question: "name",
     placeholder: "",
     choices: [
       {
-        value: " ",
+        value: "Name",
+      },
+    ],
+  },
+  {
+    inputType: "tel",
+    question: "phone",
+    placeholder: "",
+    choices: [
+      {
+        value: "Phone",
       },
     ],
   },
