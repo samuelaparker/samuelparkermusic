@@ -48,7 +48,7 @@ export default function Forms() {
   } = useForm({ mode: "all" });
 
   function onSubmit(data: any) {
-    console.log("handler fired", data, "event", event);
+    console.log("handler fired", data, "event");
 
     completeFormStep();
     fetch("/api/sheet", {
@@ -63,7 +63,7 @@ export default function Forms() {
 
   // const onSubmit = (data: any) => console.log('TESTING onSUBMIT', JSON.stringify(data));
 
-  console.log(JSON.stringify(watch())); // watch input value by passing the name of it
+  //console.log(JSON.stringify(watch())); // watch input value by passing the name of it
 
   return (
     <>
@@ -110,7 +110,7 @@ export default function Forms() {
                 {questions[2].choices[0].value}*
               </label>
               <input
-                // type={questions[2].inputType}
+                type={questions[2].inputType}
                 className="text-black p-2"
                 id={questions[2].question}
                 placeholder={questions[2].placeholder}
@@ -122,159 +122,21 @@ export default function Forms() {
 
           {formStep === 3 && (
             <section className="flex flex-col justify-start items-stretch">
-              <h1>{questions[3].question}</h1>
-
-              <input
-                className="hidden text-black p-2"
-                type={questions[3].inputType}
+              <label htmlFor={questions[3].choices[0].value}>
+                {questions[3].choices[0].value}*
+              </label>
+              <textarea
+                className="text-black p-2 h-40"
                 id={questions[3].choices[0].value}
                 placeholder={questions[3].placeholder}
-                value={questions[3].choices[0].value}
                 {...register(questions[3].question, { required: "" })}
               />
-              <label
-                className="mt-4 py-4 px-8 border-solid border-2 border-[#ccc] rounded transition-all ease-in-out duration-300"
-                htmlFor={questions[3].choices[0].value}
-              >
-                {questions[3].choices[0].value}
-              </label>
-
-              <input
-                className="hidden text-black p-2"
-                type={questions[3].inputType}
-                id={questions[3].choices[1].value}
-                placeholder={questions[3].placeholder}
-                value={questions[3].choices[1].value}
-                {...register(questions[3].question, { required: "" })}
-              />
-              <label
-                className="mt-4 py-4 px-8 border-solid border-2 border-[#ccc] rounded transition-all ease-in-out duration-300"
-                htmlFor={questions[3].choices[1].value}
-              >
-                {questions[3].choices[1].value}
-              </label>
-
               {renderNextButton()}
             </section>
           )}
 
           {formStep === 4 && (
             <section className="flex flex-col justify-start items-stretch">
-              <h1>What is your project&apos;s budget?</h1>
-
-              <input
-                className="hidden text-black p-2"
-                type={questions[4].inputType}
-                id={questions[4].choices[0].value}
-                placeholder={questions[4].placeholder}
-                value={questions[4].choices[0].value}
-                {...register("What is your project&apos;s budget?", {
-                  required: "",
-                })}
-              />
-              <label
-                className="mt-4 py-4 px-8 border-solid border-2 border-[#ccc] rounded transition-all ease-in-out duration-300"
-                htmlFor={questions[4].choices[0].value}
-              >
-                {questions[4].choices[0].value}
-              </label>
-
-              <input
-                className="hidden text-black p-2"
-                type={questions[4].inputType}
-                id={questions[4].choices[1].value}
-                placeholder={questions[4].placeholder}
-                value={questions[4].choices[1].value}
-                {...register("What is your project&apos;s budget?", {
-                  required: "",
-                })}
-              />
-              <label
-                className="mt-4 py-4 px-8 border-solid border-2 border-[#ccc] rounded transition-all ease-in-out duration-300"
-                htmlFor={questions[4].choices[1].value}
-              >
-                {questions[4].choices[1].value}
-              </label>
-
-              <input
-                className="hidden text-black p-2"
-                type={questions[4].inputType}
-                id={questions[4].choices[2].value}
-                placeholder={questions[4].placeholder}
-                value={questions[4].choices[2].value}
-                {...register("What is your project&apos;s budget?", {
-                  required: "",
-                })}
-              />
-              <label
-                className="mt-4 py-4 px-8 border-solid border-2 border-[#ccc] rounded transition-all ease-in-out duration-300"
-                htmlFor={questions[4].choices[2].value}
-              >
-                {questions[4].choices[2].value}
-              </label>
-
-              <input
-                className="hidden text-black p-2"
-                type={questions[4].inputType}
-                id={questions[4].choices[3].value}
-                placeholder={questions[4].placeholder}
-                value={questions[4].choices[3].value}
-                {...register("What is your project&apos;s budget?", {
-                  required: "",
-                })}
-              />
-              <label
-                className="mt-4 py-4 px-8 border-solid border-2 border-[#ccc] rounded transition-all ease-in-out duration-300"
-                htmlFor={questions[4].choices[3].value}
-              >
-                {questions[4].choices[3].value}
-              </label>
-
-              {renderNextButton()}
-            </section>
-          )}
-
-          {formStep === 5 && (
-            <section className="flex flex-col justify-start items-stretch">
-              <h1>{questions[5].question}</h1>
-              <label htmlFor={questions[5].question}>
-                {questions[5].choices[0].value}*
-              </label>
-              <input
-                className="text-black p-2"
-                type={questions[5].inputType}
-                id={questions[5].question}
-                placeholder={questions[5].placeholder}
-                {...register(questions[5].choices[0].value, { required: true })}
-              />
-
-              <label htmlFor={questions[5].question}>
-                {questions[5].choices[1].value}*
-              </label>
-              <input
-                className="text-black p-2"
-                type={questions[5].inputType}
-                placeholder={questions[5].placeholder}
-                {...register(questions[5].choices[1].value, { required: true })}
-              />
-
-              <label htmlFor={questions[5].question}>
-                {questions[5].choices[2].value}*
-              </label>
-              <input
-                className="text-black p-2"
-                type={questions[5].inputType}
-                placeholder={questions[5].placeholder}
-                {...register(questions[5].choices[2].value, {
-                  required: true,
-                  pattern: /^\S+@\S+$/i,
-                })}
-              />
-              {renderNextButton()}
-            </section>
-          )}
-          {formStep === 6 && (
-            <section className="flex flex-col justify-start items-stretch text-[#699CFF]">
               <h1>Thank you!</h1>
               <p>Your submission has been received.</p>
               <p>We will be in touch shortly.</p>
