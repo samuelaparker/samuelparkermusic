@@ -47,19 +47,52 @@ export default function Forms() {
     formState: { errors, isValid }, // catch error messages
   } = useForm({ mode: "all" });
 
-  function onSubmit(data: any) {
-    console.log("handler fired", data, "event");
+  const onSubmit = async (data: any) => {
+    console.log("data", data);
+    // async request which may result error
+    try {
+      // await fetch()
+      completeFormStep();
+      fetch("/api", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+    } catch (e) {
+      // handle your error
+    }
+  };
 
-    completeFormStep();
-    fetch("/api/sheet", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    reset(); // clears the input on submitting
-  }
+  // function onSubmit(data: FormData) {
+  //   completeFormStep();
+  //   fetch("/api", {
+  //     method: "POST",
+  //     body: JSON.stringify(data),
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   })
+  //     .then((response) => {})
+  //     .catch((error) => {
+  //       console.log("error", error);
+  //     });
+  //   console.log("body", JSON.stringify(data)), reset(); // clears the input on submitting
+  // }
+
+  // async function onSubmit(data: any) {
+  //   console.log("SUBMITTED", data);
+  //   const response = await fetch("/api/sheet", {
+  //     method: "POST",
+  //     body: JSON.stringify(data),
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   });
+  //   reset(); // clears the input on submitting
+  // }
 
   // const onSubmit = (data: any) => console.log('TESTING onSUBMIT', JSON.stringify(data));
 
@@ -80,7 +113,7 @@ export default function Forms() {
                 type={questions[0].inputType}
                 id={questions[0].question}
                 placeholder={questions[0].placeholder}
-                {...register(questions[0].choices[0].value, { required: true })}
+                {...register("name", { required: true })}
               />
 
               {renderNextButton()}
@@ -97,7 +130,7 @@ export default function Forms() {
                 type={questions[1].inputType}
                 id={questions[1].choices[0].value}
                 placeholder={questions[1].placeholder}
-                {...register(questions[1].choices[0].value, { required: true })}
+                {...register("email", { required: true })}
               />
 
               {renderNextButton()}
@@ -114,7 +147,7 @@ export default function Forms() {
                 className="text-black p-2"
                 id={questions[2].question}
                 placeholder={questions[2].placeholder}
-                {...register(questions[2].question, { required: true })}
+                {...register("phone", { required: true })}
               ></input>
               {renderNextButton()}
             </section>
@@ -129,7 +162,7 @@ export default function Forms() {
                 className="text-black p-2 h-40"
                 id={questions[3].choices[0].value}
                 placeholder={questions[3].placeholder}
-                {...register(questions[3].question, { required: "" })}
+                {...register("message", { required: "" })}
               />
               {renderNextButton()}
             </section>
