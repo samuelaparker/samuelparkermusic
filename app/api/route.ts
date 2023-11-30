@@ -50,9 +50,3 @@ export async function POST(req: NextRequest, res: NextResponse) {
     message: "Hello World",
   });
 }
-
-// export async function GET(request: Request) {
-//   return Response.json({
-//     message: "Hello World",
-//   });
-// }

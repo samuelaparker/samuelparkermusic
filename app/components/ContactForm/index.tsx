@@ -10,10 +10,6 @@ export default function Forms() {
     setFormStep(formStep + 1);
   };
 
-  const completeFormStepPrev = () => {
-    setFormStep(formStep - 1);
-  };
-
   const renderNextButton = () => {
     if (formStep === questions.length - 1) {
       return (
@@ -130,9 +126,17 @@ export default function Forms() {
                 type={questions[1].inputType}
                 id={questions[1].choices[0].value}
                 placeholder={questions[1].placeholder}
-                {...register("email", { required: true })}
+                {...register("email", {
+                  required: true,
+                  pattern: {
+                    value: /\S+@\S+\.\S+/,
+                    message: "Entered value does not match email format",
+                  },
+                })}
               />
-
+              {errors.email && (
+                <span role="alert">{String(errors.email.message)}</span>
+              )}
               {renderNextButton()}
             </section>
           )}
