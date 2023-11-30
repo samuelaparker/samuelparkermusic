@@ -22,23 +22,31 @@ export default function Example() {
       <Link href="/" className="font-dawning text-4xl">
         Samuel Parker
       </Link>
-      <div className="flex flex-wrap">
-        <div className="pt-8 pr-8">
+      <div className="flex flex-wrap lg:flex-row flex-col pb-20">
+        <div className="pt-8 pr-8 aspect-w-16 aspect-h-9">
           <YouTube
-            className="max-h-[100px]aspect-video"
+            className=""
             videoId="fIFMCjsqtN8"
             opts={opts}
             onReady={onPlayerReady}
           />
         </div>
-        <div className="pt-8">
+        <div className="pt-8 aspect-w-16 aspect-h-9">
           <YouTube
-            className="max-h-[100px]aspect-video"
+            className=""
             videoId="fIFMCjsqtN8"
             opts={opts}
             onReady={onPlayerReady}
           />
         </div>
+        {/* <div className="pt-8">
+          <YouTube
+            className="h-[50px]aspect-video"
+            videoId="fIFMCjsqtN8"
+            opts={opts}
+            onReady={onPlayerReady}
+          />
+        </div> */}
       </div>
     </div>
   );

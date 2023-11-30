@@ -22,7 +22,10 @@ const config: Config = {
         desktop: "url('../public/bg-desktop.png')",
       },
     },
-    plugins: [],
+    plugins: [require("@tailwindcss/aspect-ratio")],
+  },
+  corePlugins: {
+    aspectRatio: false,
   },
 };
 export default config;
