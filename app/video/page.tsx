@@ -39,14 +39,6 @@ export default function Example() {
             onReady={onPlayerReady}
           />
         </div>
-        {/* <div className="pt-8">
-          <YouTube
-            className="h-[50px]aspect-video"
-            videoId="fIFMCjsqtN8"
-            opts={opts}
-            onReady={onPlayerReady}
-          />
-        </div> */}
       </div>
     </div>
   );
