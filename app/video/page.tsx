@@ -11,8 +11,6 @@ export default function Example() {
   };
 
   const opts: YouTubeProps["opts"] = {
-    height: "390",
-    width: "640",
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 0,
@@ -24,12 +22,22 @@ export default function Example() {
       <Link href="/" className="font-dawning text-4xl">
         Samuel Parker
       </Link>
-      <div className="flex space-x-8">
-        <div className="pt-8">
-          <YouTube videoId="fIFMCjsqtN8" opts={opts} onReady={onPlayerReady} />
+      <div className="flex flex-wrap">
+        <div className="pt-8 pr-8">
+          <YouTube
+            className="max-h-[100px]aspect-video"
+            videoId="fIFMCjsqtN8"
+            opts={opts}
+            onReady={onPlayerReady}
+          />
         </div>
         <div className="pt-8">
-          <YouTube videoId="fIFMCjsqtN8" opts={opts} onReady={onPlayerReady} />
+          <YouTube
+            className="max-h-[100px]aspect-video"
+            videoId="fIFMCjsqtN8"
+            opts={opts}
+            onReady={onPlayerReady}
+          />
         </div>
       </div>
     </div>
