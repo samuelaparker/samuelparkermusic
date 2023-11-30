@@ -39,60 +39,53 @@ export default function Forms() {
     register,
     handleSubmit,
     reset,
-    watch,
     formState: { errors, isValid }, // catch error messages
   } = useForm({ mode: "all" });
 
-  const onSubmit = async (data: any) => {
-    console.log("data", data);
-    // async request which may result error
-    try {
-      // await fetch()
-      completeFormStep();
-      fetch("/api", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-    } catch (e) {
-      // handle your error
-    }
-  };
-
-  // function onSubmit(data: FormData) {
-  //   completeFormStep();
-  //   fetch("/api", {
-  //     method: "POST",
-  //     body: JSON.stringify(data),
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //   })
-  //     .then((response) => {})
-  //     .catch((error) => {
-  //       console.log("error", error);
+  //SYNCHRONOUS APPROACH
+  // const onSubmit = async (data: any) => {
+  //   try {
+  //     completeFormStep();
+  //     fetch("/api/google-sheet", {
+  //       method: "POST",
+  //       headers: {
+  //         Accept: "application/json",
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(data),
   //     });
-  //   console.log("body", JSON.stringify(data)), reset(); // clears the input on submitting
-  // }
-
-  // async function onSubmit(data: any) {
-  //   console.log("SUBMITTED", data);
-  //   const response = await fetch("/api/sheet", {
-  //     method: "POST",
-  //     body: JSON.stringify(data),
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //   });
+  //   } catch (error) {
+  //     console.log("error", error);
+  //   }
   //   reset(); // clears the input on submitting
-  // }
+  // };
 
-  // const onSubmit = (data: any) => console.log('TESTING onSUBMIT', JSON.stringify(data));
-
-  //console.log(JSON.stringify(watch())); // watch input value by passing the name of it
+  //ASYNCHRONOUS APPROACH
+  const onSubmit = async (data: any) => {
+    completeFormStep();
+    fetch("/api/google-sheet", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok.");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log("Success:", data);
+      })
+      .catch((error) => {
+        // Handle error
+        console.error("Error:", error);
+      });
+    reset(); // clears the input on submitting
+  };
 
   return (
     <>

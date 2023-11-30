@@ -5,9 +5,6 @@ export async function POST(req: NextRequest, res: NextResponse) {
   if (req.method === "POST") {
     const body = await req.json();
     const { name, email, phone, message } = body;
-
-    console.log("req.body", req.body);
-
     console.log(
       "name",
       name,
