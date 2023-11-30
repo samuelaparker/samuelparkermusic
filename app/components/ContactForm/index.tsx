@@ -14,7 +14,7 @@ export default function Forms() {
     if (formStep === questions.length - 1) {
       return (
         <button
-          className="bg-slate-400 hover:opacity-80 transition duration-300 ease-in-out  py-4 px-8 border-none rounded cursor-pointer mt-2 shadow-[rgba(255,_255,_255,_0.30)_0px_4px_9px]"
+          className="bg-slate-400 py-4 px-8 border-none rounded cursor-pointer mt-2 shadow-[rgba(255,_255,_255,_0.30)_0px_4px_9px]"
           disabled={!isValid}
           type="submit"
         >
@@ -24,7 +24,7 @@ export default function Forms() {
     } else {
       return (
         <button
-          className="bg-slate-400 hover:opacity-80 transition duration-300 ease-in-out  py-4 px-8 border-none rounded cursor-pointer mt-2 shadow-[rgba(255,_255,_255,_0.30)_0px_4px_9px]"
+          className="bg-slate-400 py-4 px-8 border-none rounded cursor-pointer mt-2 shadow-[rgba(255,_255,_255,_0.30)_0px_4px_9px]"
           disabled={!isValid}
           onClick={completeFormStep}
           type="button"
