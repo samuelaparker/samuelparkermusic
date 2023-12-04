@@ -17,36 +17,27 @@ export default function Example() {
   //   },
   // };
 
+  //add https://www.youtube.com/embed/6y5i9zwnx0A
+
   return (
     <div className="mx-4 mt-4">
       <Link href="/" className="font-dawning text-4xl">
         Samuel Parker
       </Link>
-      <div className="flex flex-wrap lg:flex-row flex-col pb-20">
-        <div className="aspect-w-16 aspect-h-9">
+      <div className="">
+        <div className="h-[400px] max-w-[800px] py-4">
           <Iframe
-            url="https://www.youtube.com/embed/WyXFfKYbtQU"
-            //https://www.youtube.com/watch?v=fIFMCjsqtN8
-
-            id=""
-            className=""
-            display="block"
-            position="relative"
-          />
-          {/* <YouTube
-            className=""
-            videoId="fIFMCjsqtN8"
-            opts={opts}
-            onReady={onPlayerReady}
-          />
+            url="https://www.youtube.com/embed/6y5i9zwnx0A"
+            title="Mandolin Orange - Wildfire - 11/2/2016 - Paste Studios, New York, NY"
+            className="w-full h-full"
+          ></Iframe>
         </div>
-        <div className="aspect-w-16 aspect-h-9">
-          <YouTube
-            className=""
-            videoId="fIFMCjsqtN8"
-            opts={opts}
-            onReady={onPlayerReady}
-          /> */}
+        <div className="h-[400px] max-w-[800px] py-4">
+          <Iframe
+            url="https://www.youtube.com/embed/6y5i9zwnx0A"
+            title="Mandolin Orange - Wildfire - 11/2/2016 - Paste Studios, New York, NY"
+            className="w-full h-full"
+          ></Iframe>
         </div>
       </div>
     </div>
