@@ -24,7 +24,7 @@ export default function Video() {
           Samuel Parker
         </Link>
         <div className="">
-          <div className="h-[350px] max-w-[600px] py-4">
+          <div className="sm:h-[350px] h-[250px] max-w-[600px] py-4">
             <Iframe
               url="https://www.youtube.com/embed/6y5i9zwnx0A"
               title="Autumn Leaves - Samuel (Sam) Parker - November 2023"
@@ -33,7 +33,7 @@ export default function Video() {
               allowFullScreen
             ></Iframe>
           </div>
-          <div className="h-[350px] max-w-[600px] py-4">
+          <div className="sm:h-[350px] h-[250px] max-w-[600px] py-4">
             <Iframe
               url="https://www.youtube.com/embed/26CmDp1ZSHI"
               title="But Beautiful - Samuel (Sam) Parker - November 2023"
