@@ -6,19 +6,7 @@ import Head from "next/head";
 
 //https://github.com/tjallingt/react-youtube
 
-export default function Example() {
-  // const onPlayerReady: YouTubeProps["onReady"] = (event) => {
-  //   // access to player in all event handlers via event.target
-  //   event.target.pauseVideo();
-  // };
-
-  // const opts: YouTubeProps["opts"] = {
-  //   playerVars: {
-  //     // https://developers.google.com/youtube/player_parameters
-  //     autoplay: 0,
-  //   },
-  // };
-
+export default function Video() {
   return (
     <>
       <Head>
