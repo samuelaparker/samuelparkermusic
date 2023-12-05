@@ -2,7 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "BIO | Samuel Parker",
+  title:
+    "BIO | Samuel Parker - Experienced Jazz Pianist available for hire, Richmond, VA",
   description:
     "Samuel Parker (Sam Parker) is a jazz pianist available for hire with over a decade of professional experience.",
 };

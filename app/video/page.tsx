@@ -10,7 +10,9 @@ export default function Video() {
   return (
     <>
       <Head>
-        <title>VIDEO | Samuel Parker</title>
+        <title>
+          VIDEO | Samuel Parker - Videos of Sam Parker playing jazz piano.
+        </title>
         <meta
           property="og:title"
           content="Videos of Samuel Parker playing jazz piano"

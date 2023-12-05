@@ -3,7 +3,8 @@ import ContactForm from "../components/ContactForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "CONTACT | Jazz Piano",
+  title:
+    "CONTACT | Jazz Piano - Contact Sam Parker for Jazz Piano for wedding cocktail hours, events, parties and more.",
   description: "Fill out the contact form to get in touch with Samuel Parker.",
 };
 

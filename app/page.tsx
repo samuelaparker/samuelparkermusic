@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Samuel Parker | Jazz Piano",
+  title: "Samuel Parker | Jazz Piano - Richmond, VA",
   description:
     "Samuel Parker (Sam Parker) is a jazz pianist available for hire. He is currently based out of Richmond, VA. He plays wedding cocktail hours, background music for events and parties and accompaniment for musicians and vocalists.",
 };
