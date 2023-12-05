@@ -5,6 +5,23 @@ export const metadata: Metadata = {
   title: "Samuel Parker | Jazz Piano - Richmond, VA",
   description:
     "Samuel Parker (Sam Parker) is a jazz pianist available for hire. He is currently based out of Richmond, VA. He plays wedding cocktail hours, background music for events and parties and accompaniment for musicians and vocalists.",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://samuelparkermusic.com/",
+    title: "Samuel Parker | Jazz Piano - Richmond, VA",
+    description:
+      "Samuel Parker (Sam Parker) is a jazz pianist available for hire. He is currently based out of Richmond, VA. He plays wedding cocktail hours, background music for events and parties and accompaniment for musicians and vocalists.",
+
+    images: [
+      {
+        url: "https://samuelparkermusic.com//opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Samuel Parker | Jazz Piano - Richmond, VA",
+      },
+    ],
+  },
 };
 
 export default function Home() {
