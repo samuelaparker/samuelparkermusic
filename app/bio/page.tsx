@@ -1,4 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "BIO | Samuel Parker",
+  description:
+    "Samuel Parker (Sam Parker) is a jazz pianist available for hire with over a decade of professional experience.",
+};
 
 export default function Bio() {
   return (

@@ -1,5 +1,11 @@
 import Link from "next/link";
 import ContactForm from "../components/ContactForm";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "CONTACT | Jazz Piano",
+  description: "Fill out the contact form to get in touch with Samuel Parker.",
+};
 
 export default function Contact() {
   return (
