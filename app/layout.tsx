@@ -40,7 +40,7 @@ export default function RootLayout({
       className={`${dawning.variable} ${rubik_mono.variable} ${koulen.variable}`}
     >
       <body className="min-h-[100svh] bg-mobile sm:bg-desktop bg-cover bg-no-repeat text-[#E4E4E4] overflow-hidden ">
-        <div className=" min-h-[100svh] container mx-auto relative pt-4">
+        <div className=" flex flex-col items-center min-h-[100svh] container mx-auto relative pt-4">
           {children}
           <div className="absolute bottom-0">
             <div className="my-8">

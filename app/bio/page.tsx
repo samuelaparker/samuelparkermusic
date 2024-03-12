@@ -11,9 +11,11 @@ export const metadata: Metadata = {
 export default function Bio() {
   return (
     <div className="mx-4 mt-4">
-      <Link href="/" className="font-dawning text-4xl">
-        Samuel Parker
-      </Link>
+      <div className="w-full text-center">
+        <Link href="/" className="font-dawning text-4xl">
+          Samuel Parker
+        </Link>
+      </div>
       <div className="mt-4 sm:mt-8 max-w-3xl sm:text-2xl">
         <p className="mt-2 ">
           From Maine&apos;s serene coast to the busy streets of NYC and now

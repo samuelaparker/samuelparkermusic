@@ -11,10 +11,12 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <div className="mx-4 mt-4">
-      <Link href="/" className="font-dawning text-4xl">
-        Samuel Parker
-      </Link>
-      <div className="flex flex-col min-h-[80svh] justify-center mx-auto sm:mt-8 max-w-3xl sm:text-4xl text-2xl">
+      <div className="w-full text-center">
+        <Link href="/" className="font-dawning text-4xl">
+          Samuel Parker
+        </Link>
+      </div>
+      <div className="flex flex-col min-h-[50svh] justify-center mx-auto sm:mt-8 max-w-3xl sm:text-4xl text-2xl">
         <p className="mt-2 ">For all inquiries please fill out form below.</p>
         <div className="mt-4 text-base sm:text-lg">
           <ContactForm />
