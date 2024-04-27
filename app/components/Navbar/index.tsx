@@ -22,6 +22,14 @@ const Navbar = () => {
         >
           Contact
         </Link>
+        <a
+          className="m-4 hover:opacity-80 transition duration-300 ease-in-out"
+          href="https://www.paypal.com/ncp/payment/TKUEZDLU9WTV6"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Donate
+        </a>
       </div>
     </>
   );
