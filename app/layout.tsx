@@ -52,7 +52,6 @@ export default function RootLayout({
           </div>
         </div>
       </body>
-      <script async src="/scripts/ml.js" />
     </html>
   );
 }

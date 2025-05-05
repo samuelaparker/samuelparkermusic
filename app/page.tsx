@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import MailerLitePopup from "./components/MailerLitePopup";
 
 export const metadata: Metadata = {
   title: "Samuel Parker | Jazz Piano - Richmond, VA",
